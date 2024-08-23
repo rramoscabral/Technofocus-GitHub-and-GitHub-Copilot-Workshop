@@ -12,10 +12,22 @@ In this workshop, you will learn GitHub essentials, including repository managem
      ```powershell
      # Apache maven (mvn)
      cd \
-     wget -uri https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.zip -OutFile apache-maven-3.9.9-bin.zip 
+     wget -uri "https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.zip" -OutFile apache-maven-3.9.9-bin.zip 
      Expand-Archive .\apache-maven-3.9.9-bin.zip -DestinationPath "C:\"
      [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\apache-maven-3.9.9\bin\", "Machine")
+
+
+     # Microsoft OpenJDK 17
+     cd "c:\Users\Admin\Downloads"
+     wget -uri "https://aka.ms/download-jdk/microsoft-jdk-17.0.12-windows-x64.msi" -OutFile microsoft-jdk-17.0.12-windows-x64.msi
+     Start-Process 'c:\Users\Admin\Downloads\microsoft-jdk-17.0.12-windows-x64.msi' -Wait install
+
      
+     # Node.js 20.16.0
+     cd "c:\Users\Admin\Downloads"
+     wget -uri "https://nodejs.org/dist/v20.16.0/node-v20.16.0-x64.msi" -OutFile node-v20.16.0-x64.msi
+     Start-Process 'c:\Users\Admin\Downloads\node-v20.16.0-x64.msi' -Wait install
+
      
      # Nuget pakage source for Microsoft Visual Studio Offline Packages
      cd "c:\Users\Admin\Downloads"
